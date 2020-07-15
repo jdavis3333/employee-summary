@@ -1,17 +1,17 @@
 # Unit 10 OOP Homework: Template Engine - Employee Summary
 
-One of the most important aspects of programming is writing code that is readable, reliable, and maintainable. Oftentimes, *how* we design our code is just as important as the code itself. In this homework assignment, your challenge is to build a Node CLI that takes in information about employees and generates an HTML webpage that displays summaries for each person. Since testing is a key piece in making code maintainable, you will also be ensuring that all unit tests pass.
+<!-- One of the most important aspects of programming is writing code that is readable, reliable, and maintainable. Oftentimes, *how* we design our code is just as important as the code itself. In this homework assignment, your challenge is to build a Node CLI that takes in information about employees and generates an HTML webpage that displays summaries for each person. Since testing is a key piece in making code maintainable, you will also be ensuring that all unit tests pass. -->
 
 
 ## Instructions
 
-You will build a software engineering team generator command line application. The application will prompt the user for information about the team manager and then information about the team members. The user can input any number of team members, and they may be a mix of engineers and interns. This assignment must also pass all unit tests. When the user has completed building the team, the application will create an HTML file that displays a nicely formatted team roster based on the information provided by the user. Following the [common templates for user stories](https://en.wikipedia.org/wiki/User_story#Common_templates), we can frame this challenge as follows:
+<!-- You will build a software engineering team generator command line application. The application will prompt the user for information about the team manager and then information about the team members. The user can input any number of team members, and they may be a mix of engineers and interns. This assignment must also pass all unit tests. When the user has completed building the team, the application will create an HTML file that displays a nicely formatted team roster based on the information provided by the user. Following the [common templates for user stories](https://en.wikipedia.org/wiki/User_story#Common_templates), we can frame this challenge as follows: -->
 
-```
+<!-- ```
 As a manager
 I want to generate a webpage that displays my team's basic info
 so that I have quick access to emails and GitHub profiles
-```
+``` -->
 
 How do you deliver this? Here are some guidelines:
 
@@ -137,14 +137,14 @@ The project must generate a `team.html` page in the `output` directory, that dis
   * Role-specific property (School, link to GitHub profile, or office number)
 
 ## Bonus
-
+<!-- 
 * Use validation to ensure that the information provided is in the proper expected format.
 
-* Add the application to your portfolio.
+* Add the application to your portfolio. -->
 
 ## Commit Early and Often
 
-One of the most important skills to master as a web developer is version control. Building the habit of committing via Git is important for two reasons:
+<!-- One of the most important skills to master as a web developer is version control. Building the habit of committing via Git is important for two reasons:
 
 * Your commit history is a signal to employers that you are actively working on projects and learning new skills.
 
@@ -160,11 +160,11 @@ Follow these guidelines for committing:
 
 * Test your application before you commit to ensure functionality at every step in the development process.
 
-We would like you to have well over 200 commits by graduation, so commit early and often!
+We would like you to have well over 200 commits by graduation, so commit early and often! -->
 
 
 ## Submission on BCS
-
+<!-- 
 You are required to submit the following:
 
 * The URL of the GitHub repository
@@ -172,4 +172,4 @@ You are required to submit the following:
 * A video demonstrating the entirety of the app's functionality 
 
 - - -
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved. -->
