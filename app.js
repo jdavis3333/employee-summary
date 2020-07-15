@@ -72,6 +72,7 @@ function manager() {
         getUserInputs();
     }) 
 }
+
 function engineer() {
     inquirer.prompt([
         {
@@ -101,6 +102,7 @@ function engineer() {
         getUserInputs();
     }) 
 }
+
 function intern() {
     inquirer.prompt([
         {
