@@ -9,10 +9,40 @@ const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
+const { doesNotMatch } = require("assert");
 
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
+
+function getUserInputs() {
+    inquirer.prompt([
+        {
+        type:"list",
+        message: "What team member would you like to create?",
+        name: "createdEmployee",
+        choices: ["Manager, Engineer, Intern, Done"]
+        },
+    ])
+    .then(teamMember => {
+        switch(teamMember.createdEmployee) {
+            case "Engineer":
+                engineer();
+                break;
+            case "Manager":
+                manager();
+                break;
+            case "Intern":
+                intern();
+                break;
+            case "Done":
+                createTeam();
+                break;
+        }
+    })
+
+ 
+}
 
 
 
