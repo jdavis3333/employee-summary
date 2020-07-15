@@ -10,7 +10,7 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
 const { doesNotMatch } = require("assert");
-
+var employeeList = [];
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
@@ -21,7 +21,7 @@ function getUserInputs() {
         type:"list",
         message: "What team member would you like to create?",
         name: "createdEmployee",
-        choices: ["Manager, Engineer, Intern, Done"]
+        choices: ["Manager", "Engineer", "Intern", "Done"]
         },
     ])
     .then(teamMember => {
@@ -41,10 +41,103 @@ function getUserInputs() {
         }
     })
 
- 
 }
 
+function manager() {
+    inquirer.prompt([
+        {
+            type: "input",
+            message: "Enter Name",
+            name: "name"
+        },
+        {
+            type: "input",
+            message: "What is your employee ID?",
+            name: "id"
+        },
+        {
+            type: "input",
+            message: "What is your employee email?",
+            name: "email"
+        },
+        {
+            type: "input",
+            message: "What is your office number?",
+            name: "officeNumber"
+        },
+    ])
+    .then(function(response){
+        var myManager = new Manager(response.name, response.id, response.email, response.officeNumber);
+        employeeList.push(myManager);
+        getUserInputs();
+    }) 
+}
+function engineer() {
+    inquirer.prompt([
+        {
+            type: "input",
+            message: "Enter Name",
+            name: "name"
+        },
+        {
+            type: "input",
+            message: "What is your employee ID?",
+            name: "id"
+        },
+        {
+            type: "input",
+            message: "What is your employee email?",
+            name: "email"
+        },
+        {
+            type: "input",
+            message: "What is your github username?",
+            name: "github"
+        },
+    ])
+    .then(function(response){
+        var myEngineer = new Engineer(response.name, response.id, response.email, response.github);
+        employeeList.push(myEngineer);
+        getUserInputs();
+    }) 
+}
+function intern() {
+    inquirer.prompt([
+        {
+            type: "input",
+            message: "Enter Name",
+            name: "name"
+        },
+        {
+            type: "input",
+            message: "What is your employee ID?",
+            name: "id"
+        },
+        {
+            type: "input",
+            message: "What is your employee email?",
+            name: "email"
+        },
+        {
+            type: "input",
+            message: "What is your school?",
+            name: "school"
+        },
+    ])
+    .then(function(response){
+        var myIntern = new Intern(response.name, response.id, response.email, response.school);
+        employeeList.push(myIntern);
+        getUserInputs();
+    }) 
+}
 
+function createTeam() {
+    if(!fs.existsSync(OUTPUT_DIR)){
+        fs.mkdirSync(OUTPUT_DIR)
+    }
+    fs.writeFileSync(outputPath, render(employeeList), "utf-8")
+}
+getUserInputs();
 
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
